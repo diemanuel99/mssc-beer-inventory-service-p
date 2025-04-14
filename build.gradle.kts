@@ -29,6 +29,8 @@ repositories {
 }
 
 dependencies {
+    implementation(platform("roshka.diegoduarte:mssc-brewery-bom:0.0.1-SNAPSHOT"))
+    annotationProcessor(platform("roshka.diegoduarte:mssc-brewery-bom:0.0.1-SNAPSHOT"))
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -36,18 +38,17 @@ dependencies {
     implementation ("org.springframework.boot:spring-boot-starter-validation")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    implementation ("org.mapstruct:mapstruct:${mapstructVersion}")
-    implementation ("org.projectlombok:lombok:${lombokVersion}")
+    implementation ("org.mapstruct:mapstruct")
+    implementation ("org.projectlombok:lombok")
 
-    annotationProcessor ("org.mapstruct:mapstruct-processor:${mapstructVersion}")
-    annotationProcessor ("org.projectlombok:lombok:${lombokVersion}")
-    annotationProcessor ("org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}")
-    //testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    annotationProcessor ("org.mapstruct:mapstruct-processor")
+    annotationProcessor ("org.projectlombok:lombok")
+    annotationProcessor ("org.projectlombok:lombok-mapstruct-binding")
     // JUnit 5 (Jupiter)
     testImplementation ("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine")
-    testImplementation ("org.mockito:mockito-core:5.16.0")
-    testImplementation ("org.mockito:mockito-junit-jupiter:5.16.0")
+    testImplementation ("org.mockito:mockito-core")
+    testImplementation ("org.mockito:mockito-junit-jupiter")
     //database
     runtimeOnly ("com.h2database:h2")
 }
