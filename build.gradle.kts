@@ -51,6 +51,7 @@ dependencies {
     testImplementation ("org.mockito:mockito-junit-jupiter")
     //database
     runtimeOnly ("com.h2database:h2")
+    implementation("com.mysql:mysql-connector-j")
 }
 
 tasks.withType<Test> {
